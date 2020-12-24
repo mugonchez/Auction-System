@@ -1,0 +1,292 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-25 14:09+0300\n"
+"PO-Revision-Date: 2018-08-25 14:13+0227\n"
+"Last-Translator: b'  <moses@email.com>'\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.8.1\n"
+
+#: .\forms.py:7
+msgid "review"
+msgstr "tathmini"
+
+#: .\forms.py:15
+msgid "Email"
+msgstr "Barua pepe"
+
+#: .\forms.py:16
+msgid "Body"
+msgstr "Mwili"
+
+#: .\templates\catalog\base.html:34 .\templates\catalog\base_list.html:34
+msgid "Home"
+msgstr "Nyumbani"
+
+#: .\templates\catalog\base.html:37 .\templates\catalog\base_list.html:37
+#: .\templates\search\search.html:10 .\templates\search\search.html:17
+msgid "Search"
+msgstr "Tafuta"
+
+#: .\templates\catalog\base.html:40 .\templates\catalog\base_list.html:40
+msgid "Help Center"
+msgstr "Usaidizi"
+
+#: .\templates\catalog\base.html:42 .\templates\catalog\base_list.html:42
+msgid "My dashboard"
+msgstr "Dashibodi yangu"
+
+#: .\templates\catalog\base.html:51 .\templates\catalog\base_list.html:51
+msgid "Your cart"
+msgstr "Gari lako"
+
+#: .\templates\catalog\base.html:57 .\templates\catalog\base_list.html:57
+msgid "Your cart is empty"
+msgstr "Gari lako ni tupu"
+
+#: .\templates\catalog\base.html:71 .\templates\catalog\base_list.html:82
+msgid "Logout"
+msgstr "Toka nje"
+
+#: .\templates\catalog\base.html:75 .\templates\catalog\base_list.html:86
+msgid "Sign Up"
+msgstr "Jisajili"
+
+#: .\templates\catalog\base.html:76 .\templates\catalog\base_list.html:87
+msgid "Log-in"
+msgstr "Ingia"
+
+#: .\templates\catalog\base_list.html:66
+msgid "Language"
+msgstr "Lugha"
+
+#: .\templates\catalog\detail.html:35
+msgid "Available stock"
+msgstr "Hisa zilizoko"
+
+#: .\templates\catalog\detail.html:37
+msgid "Available stock: depleted "
+msgstr "Hisa zilizoko: zimekwisha"
+
+#: .\templates\catalog\detail.html:44 .\templates\catalog\review.html:46
+msgid "Add to cart"
+msgstr "Ongeza kwa gari"
+
+#: .\templates\catalog\detail.html:48
+msgid "Write a Review"
+msgstr "Andika tathmini"
+
+#: .\templates\catalog\detail.html:70
+msgid "There are no reviews for this product yet"
+msgstr "Hakuna tathmini kwa hii bidhaa"
+
+#: .\templates\catalog\feedback.html:24 .\templates\catalog\list.html:169
+msgid "Leave a feedback"
+msgstr "Acha maoni"
+
+#: .\templates\catalog\feedback.html:37
+#| msgid "Leave a feedback"
+msgid "Send Feedback"
+msgstr "Tuma maoni"
+
+#: .\templates\catalog\help.html:9
+msgid "How to place an order"
+msgstr "Jinsi ya kuagiza"
+
+#: .\templates\catalog\help.html:11
+msgid ""
+"Navigate through the products and select the  products you want to purchase "
+"by clicking on the product"
+msgstr ""
+"Nenda kupitia bidhaa na uchague bidhaa unayotaka kununua kwa kubonyeza "
+"bidhaa"
+
+#: .\templates\catalog\help.html:15
+msgid "Click on the product you want to purchase the add it to the cart"
+msgstr "Bonyeza bidhaa unayotaka kisha ongeza kwenye gari"
+
+#: .\templates\catalog\help.html:19
+msgid ""
+"Once you have exhausted your cart, click the checkout button and proceed to "
+"placing an order"
+msgstr ""
+"Mara tu umejaza gari lako, bofya kifungo cha kuangalia na uendelee kuweka "
+"agizo"
+
+#: .\templates\catalog\list.html:20
+msgid "All"
+msgstr "Yote"
+
+#: .\templates\catalog\list.html:28
+msgid "Men clothing"
+msgstr "Nguo za wanaume"
+
+#: .\templates\catalog\list.html:33
+msgid "Shirts"
+msgstr "Mashati"
+
+#: .\templates\catalog\list.html:34 .\templates\catalog\list.html:52
+msgid "Trousers"
+msgstr "Suruali"
+
+#: .\templates\catalog\list.html:35 .\templates\catalog\list.html:51
+msgid "Suit"
+msgstr "Suti"
+
+#: .\templates\catalog\list.html:36
+msgid "Sweaters"
+msgstr "Sweta"
+
+#: .\templates\catalog\list.html:44
+msgid "Women clothing"
+msgstr "Nguo za wanawake"
+
+#: .\templates\catalog\list.html:49
+msgid "Dresses"
+msgstr "Rinda"
+
+#: .\templates\catalog\list.html:50
+msgid "Blouses"
+msgstr ""
+"\t\n"
+"Blauzi"
+
+#: .\templates\catalog\list.html:60 .\templates\catalog\list.html:138
+msgid "Shoes"
+msgstr "Viatu"
+
+#: .\templates\catalog\list.html:67 .\templates\catalog\list.html:139
+msgid "Others"
+msgstr "Mengineyo"
+
+#: .\templates\catalog\list.html:97
+msgid "Most recent items"
+msgstr "Bidhaa  vya hivi karibuni"
+
+#: .\templates\catalog\list.html:99
+msgid "Most reviewed items"
+msgstr "Bidhaa vyema zaidi"
+
+#: .\templates\catalog\list.html:101
+msgid "Most purchased items"
+msgstr "Bidhaa 'zonunuliwa zaidi"
+
+#: .\templates\catalog\list.html:103
+msgid "Subscribe to our RSS feed"
+msgstr "Jisajili, malisho yetu ya RSS"
+
+#: .\templates\catalog\list.html:108
+msgid "Products"
+msgstr "Bidhaa"
+
+#: .\templates\catalog\list.html:125
+msgid "There are no products for this category yet"
+msgstr "Hakuna bidhaa kwa hiki kikundi"
+
+#: .\templates\catalog\list.html:135
+msgid "TOP CATEGORIES"
+msgstr "Vikundi vya juu"
+
+#: .\templates\catalog\list.html:136
+msgid "Men Clothing"
+msgstr "Nguo za wanaume"
+
+#: .\templates\catalog\list.html:137
+msgid "Women Clothing"
+msgstr "Nguo za wanawake"
+
+#: .\templates\catalog\list.html:146
+msgid "HELP"
+msgstr "Usaudizi"
+
+#: .\templates\catalog\list.html:147
+msgid "Delivery"
+msgstr "Utoaji"
+
+#: .\templates\catalog\list.html:148
+msgid "Returns"
+msgstr "Kurudisha"
+
+#: .\templates\catalog\list.html:149
+msgid "Secure Payments"
+msgstr "Malipo Salama"
+
+#: .\templates\catalog\list.html:150
+msgid "Contact Us"
+msgstr "Tupigie"
+
+#: .\templates\catalog\list.html:157
+msgid "ABOUT US"
+msgstr "Kutuhusu"
+
+#: .\templates\catalog\list.html:158
+msgid "Careers"
+msgstr "Kazi"
+
+#: .\templates\catalog\list.html:159
+msgid "Terms & Conditions of Sales"
+msgstr "Masharti na hali ya mauzo"
+
+#: .\templates\catalog\list.html:160
+msgid "Privacy Policy"
+msgstr "Sera ya faragha"
+
+#: .\templates\catalog\list.html:161
+msgid "Responsibility"
+msgstr "Ujibu"
+
+#: .\templates\catalog\list.html:168
+msgid "FEEDBACK"
+msgstr "MAONI"
+
+#: .\templates\catalog\pagination.html:11
+msgid "Previous"
+msgstr "Kabla"
+
+#: .\templates\catalog\pagination.html:15
+msgid "Page"
+msgstr "Ukurasa"
+
+#: .\templates\catalog\pagination.html:15
+msgid "of"
+msgstr "wa"
+
+#: .\templates\catalog\pagination.html:19
+msgid "Next"
+msgstr "Inayofuata"
+
+#: .\templates\catalog\review.html:25
+msgid "Review this product"
+msgstr "Tathmini bidhaa hii"
+
+#: .\templates\catalog\review.html:50
+msgid "Go back"
+msgstr "Rudi nyuma"
+
+#: .\templates\catalog\review.html:70
+msgid "Add a review"
+msgstr "Ongeza tathmini"
+
+#: .\templates\search\search.html:21
+msgid "Products containing"
+msgstr "Bidhaa zinazo neno"
+
+#: .\templates\search\search.html:23
+msgid "Found"
+msgstr "Imeoatikana"
+
+#: .\templates\search\search.html:23
+msgid "result"
+msgstr "Matokeo"

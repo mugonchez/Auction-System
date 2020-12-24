@@ -1,0 +1,67 @@
+{% extends 'catalog/base.html' %}
+
+{% block title %}
+    Checkout
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    {% load i18n %}
+    <h1>{% trans 'Checkout' %}</h1>
+    <hr>
+    <p class="para">{% trans 'Please specify the sizes of your products in the specification area. Be precise and clear'%}
+    </p>
+    <hr>
+
+     <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form action="." class="form-horizontal" method="post" enctype="multipart/form-data">
+                    {% csrf_token%}
+                    {% include 'account/form_template.html'%}
+                    <input type="hidden" name="next" value="{{ next }}" />
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <button type="Submit" class="btn btn-primary">{% trans 'Place Order' %}</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default col-md-6">
+        <div class="panel-header">
+            <h3 style="text-align:center;">{% trans 'Your Order' %}</h3>
+        </div>
+        <hr>
+        <table class="cart">
+            <thead>
+                <tr>
+                    <th>{% trans 'Quantity' %}</th>
+                    <th>{% trans 'Product' %}</th>
+                    <th>{% trans 'Unit price' %}</th>
+                    <th>{% trans 'Price' %}</th>
+
+                </tr>
+            </thead>
+            <tbody>
+            {% for item in cart %}
+                <tr>
+                    <td>{{ item.quantity }}</td>
+                    <td>{{ item.product.name }}</td>
+                    <td class="num">Ksh {{ item.price }}</td>
+                    <td class="num">Ksh {{ item.total_price }}</td>
+                </tr>
+            {% endfor %}
+            <tr class="total">
+                <td>Total</td>
+                <td colspan="2"></td>
+                <td class="num">Ksh {{ cart.get_total_price }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+{% endblock %}

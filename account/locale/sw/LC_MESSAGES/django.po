@@ -1,0 +1,365 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-25 14:18+0300\n"
+"PO-Revision-Date: 2018-08-25 16:24+0227\n"
+"Last-Translator: b'  <moses@email.com>'\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.8.1\n"
+
+#: .\forms.py:8
+msgid "Password"
+msgstr "Nenosiri"
+
+#: .\forms.py:9
+msgid "Repeat password"
+msgstr "Rudia nenosiri"
+
+#: .\forms.py:10 .\forms.py:25
+msgid "Username"
+msgstr "Jina la mtumiaji"
+
+#: .\forms.py:11 .\forms.py:28
+msgid "Email"
+msgstr "Barua pepe"
+
+#: .\forms.py:26
+msgid "Last Name"
+msgstr "Jina la familia"
+
+#: .\forms.py:27
+msgid "First Name"
+msgstr "Jina la kwanza"
+
+#: .\forms.py:36
+msgid "Address"
+msgstr "Anwani"
+
+#: .\forms.py:46
+msgid "I have read and agree to the terms and conditions"
+msgstr "Nimesoma na kukubaliana na masharti na hali"
+
+#: .\templates\account\base_dash.html:32
+msgid "Home"
+msgstr "Nyumbani"
+
+#: .\templates\account\base_dash.html:35
+msgid "Search"
+msgstr "Tafuta"
+
+#: .\templates\account\base_dash.html:39
+msgid "My dashboard"
+msgstr "Dashibodi yangu"
+
+#: .\templates\account\base_dash.html:48
+msgid "Your cart"
+msgstr "Gari lako"
+
+#: .\templates\account\base_dash.html:54
+msgid "Your cart is empty"
+msgstr "Gari lako ni tupu"
+
+#: .\templates\account\base_dash.html:68
+msgid "Messages"
+msgstr "Ujumbe"
+
+#: .\templates\account\base_dash.html:74
+msgid "Logout"
+msgstr "Toka nje"
+
+#: .\templates\account\base_dash.html:78
+msgid "Sign Up"
+msgstr "Jiunge"
+
+#: .\templates\account\base_dash.html:79 .\templates\registration\login.html:8
+#: .\templates\registration\login.html:27
+msgid "Log-in"
+msgstr "Ingia"
+
+#: .\templates\account\cancel_done.html:8
+msgid "Cancel done"
+msgstr "Kufuta kufanywa"
+
+#: .\templates\account\cancel_done.html:10
+msgid "you have successfully cancelled your order"
+msgstr "umefutwa kwa ufanisi ombi lako"
+
+#: .\templates\account\dashboard.html:9
+msgid "Dashboard"
+msgstr "Dashibodi"
+
+#: .\templates\account\dashboard.html:11
+msgid "Welcome to your dashboard. You can"
+msgstr "Karibu kwa dashibodi yako. Waweza "
+
+#: .\templates\account\dashboard.html:11
+msgid "edit your account"
+msgstr "hariri akaunti yako"
+
+#: .\templates\account\dashboard.html:12
+msgid "or"
+msgstr "au"
+
+#: .\templates\account\dashboard.html:12
+msgid "change your password"
+msgstr "badilisha neno siri lako"
+
+#: .\templates\account\dashboard.html:15
+msgid ""
+"To pay for your orders, please ensure that you have first activated your "
+"account"
+msgstr "Ili kulipia ombi zako, tafadhali hakikisha kuwa umeamsha akaunti yako"
+
+#: .\templates\account\dashboard.html:21
+msgid "My Account"
+msgstr "Akaunti yangu"
+
+#: .\templates\account\dashboard.html:26
+msgid "Account Balance"
+msgstr "Usawa wa akaunti"
+
+#: .\templates\account\dashboard.html:27
+msgid "Top Up"
+msgstr "Ongeza pesa"
+
+#: .\templates\account\dashboard.html:29
+msgid "Please activate your account by topping up any amount"
+msgstr "Tafadhali amsha akaunti yako kwa kuweka kiasi chochote cha pesa"
+
+#: .\templates\account\dashboard.html:30
+msgid "Activate Account"
+msgstr "Amsha akaunti"
+
+#: .\templates\account\dashboard.html:39
+msgid "Your order id"
+msgstr "Agizo lako lenye utambulisho"
+
+#: .\templates\account\dashboard.html:39
+msgid "is settled"
+msgstr "imewekwa"
+
+#: .\templates\account\dashboard.html:41
+msgid "Your pending order id"
+msgstr "Agizoi lako linalosubiri lenye utambulisho"
+
+#: .\templates\account\dashboard.html:44
+msgid "Approved"
+msgstr "Imeidhinishwa"
+
+#: .\templates\account\dashboard.html:47
+#| msgid "Cancel this order"
+msgid "Pay for this order"
+msgstr "Lipia agizo hili"
+
+#: .\templates\account\dashboard.html:49
+msgid "Your total amount to pay for this order is"
+msgstr "Kiasi chako cha kulipa kwa agizo hili ni"
+
+#: .\templates\account\dashboard.html:52
+msgid "Pending Approval"
+msgstr "Inasubiri idhini"
+
+#: .\templates\account\dashboard.html:55
+msgid "Paid"
+msgstr "Imelipwa"
+
+#: .\templates\account\dashboard.html:56
+msgid ""
+"Your delivery will be dispatched in 3 working days to the address you "
+"gave.You will be notified once it is delivered"
+msgstr ""
+"Utoaji wako utatumwa kwa siku tatu za kazi kwa anwani uliyotoa.Utaambiwa "
+"mara moja itakapotolewa"
+
+#: .\templates\account\dashboard.html:57
+msgid "Clear this order from dashboard"
+msgstr "Futa agizo hili kutoka kwa dashibodi"
+
+#: .\templates\account\dashboard.html:59
+msgid "Pending Payment"
+msgstr "Inasubiri malipo"
+
+#: .\templates\account\dashboard.html:62
+msgid "Cancel this order"
+msgstr "Futa agizo hili"
+
+#: .\templates\account\dashboard.html:71
+msgid "Your past orders summary"
+msgstr "Muhtasari wako wa maagizo ya zamani"
+
+#: .\templates\account\dashboard.html:84
+msgid "You have not placed any orders yet"
+msgstr "Hujaweka agizo lolote bado"
+
+#: .\templates\account\dashboard.html:92
+msgid "Your message inbox"
+msgstr "Ujumbe wako wa kikasha"
+
+#: .\templates\account\dashboard.html:104
+msgid "You have no new message"
+msgstr "Huna ujumbe mpya"
+
+#: .\templates\account\edit.html:18
+msgid "Edit your account"
+msgstr "Hariri akaunti yako"
+
+#: .\templates\account\edit.html:20
+msgid "You can edit your account using the following form"
+msgstr "Unaweza kubadilisha akaunti yako kwa kutumia fomu ifuatayo"
+
+#: .\templates\account\edit.html:32
+msgid "Save changes"
+msgstr "hifadhi mabadiliko"
+
+#: .\templates\account\register.html:8
+msgid "Create an account"
+msgstr "Tengeneza akaunti"
+
+#: .\templates\account\register.html:10
+msgid "Please sign up using the following form"
+msgstr "Tafadhali jisajili kwa kutumia fomu ifuatayo"
+
+#: .\templates\account\register.html:20
+msgid "Terms and conditions of our services"
+msgstr "Masharti ya huduma zetu"
+
+#: .\templates\account\register.html:30
+msgid "Create account"
+msgstr "Tengeneza akaunti"
+
+#: .\templates\account\register_done.html:8
+msgid "Welcome"
+msgstr "Karibu"
+
+#: .\templates\account\register_done.html:10
+msgid "Your account has been successfully created. Now you can"
+msgstr "Akaunti yako imeundwa kwa ufanisi. Sasa unaweza"
+
+#: .\templates\account\register_done.html:10
+msgid "log-in"
+msgstr "ingia"
+
+#: .\templates\registration\logged_out.html:8
+msgid "Logged-out"
+msgstr "Umetoka nje"
+
+#: .\templates\registration\logged_out.html:10
+msgid "You have been successfully logged out. You can"
+msgstr "Umetoka nje kwa ufanisi. Waweza "
+
+#: .\templates\registration\logged_out.html:10
+msgid "Log-in again"
+msgstr "ingia tena"
+
+#: .\templates\registration\login.html:12
+msgid "Your username and password didn't match.please try again"
+msgstr ""
+"Jina lako la mtumiaji na nenosiri halikufananishwa.Tafadhali jaribu tena"
+
+#: .\templates\registration\login.html:15
+msgid "Please use the following form to log-in. If you don't have an account"
+msgstr "Tafadhali tumia fomu ifuatayo kuingia. Ikiwa huna akaunti"
+
+#: .\templates\registration\login.html:15
+msgid "register here"
+msgstr "Jisajili  hapa"
+
+#: .\templates\registration\login.html:31
+msgid "Forgotten your  password?"
+msgstr "Umeisahau neno siri lako?"
+
+#: .\templates\registration\password_change_done.html:8
+msgid "Password changed"
+msgstr "Nenosiri limebadilika"
+
+#: .\templates\registration\password_change_done.html:10
+msgid "Your password has successfully been changed"
+msgstr "Nenosiri lako limebadilishwa kwa mafanikio"
+
+#: .\templates\registration\password_change_form.html:8
+msgid "Change you password"
+msgstr "Badilisha neno siri lako"
+
+#: .\templates\registration\password_change_form.html:10
+msgid "Use the form below to change your password."
+msgstr "Tumia fomu hapa chini ili kubadilisha nenosiri lako."
+
+#: .\templates\registration\password_change_form.html:21
+msgid "Change"
+msgstr "Badilisha"
+
+#: .\templates\registration\password_reset_complete.html:8
+msgid "Password set"
+msgstr "Kuweka nenosiri"
+
+#: .\templates\registration\password_reset_complete.html:10
+msgid "Your password has been set. You can"
+msgstr "Nenosiri lako limewekwa. Unaweza"
+
+#: .\templates\registration\password_reset_complete.html:10
+msgid "log-in now"
+msgstr "Ingia sasa"
+
+#: .\templates\registration\password_reset_confirm.html:8
+#: .\templates\registration\password_reset_done.html:8
+msgid "Reset your password"
+msgstr "Weka upya nenosiri lako"
+
+#: .\templates\registration\password_reset_confirm.html:11
+msgid "Please enter your new password twice"
+msgstr "Tafadhali ingiza neno siri lako mpya mara mbili"
+
+#: .\templates\registration\password_reset_confirm.html:22
+msgid "Change my password"
+msgstr "Badilisha neno siri langu"
+
+#: .\templates\registration\password_reset_confirm.html:31
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used. Please request a new password reset"
+msgstr ""
+"Kiungo cha kuweka upya nenosiri kilikuwa batili, labda kwa sababu tayari "
+"imetumiwa. Tafadhali ombi upya upya nenosiri"
+
+#: .\templates\registration\password_reset_done.html:10
+msgid "We've emailed you instructions for setting your password."
+msgstr "Tumekupeleka maelekezo ya barua pepe kwa kuweka neno siri lako."
+
+#: .\templates\registration\password_reset_done.html:11
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with."
+msgstr ""
+"Ikiwa hujapokea barua pepe, tafadhali hakikisha umeingiza anwani "
+"uliyosajiliwa nayo."
+
+#: .\templates\registration\password_reset_form.html:8
+msgid "Forgotten your password?"
+msgstr "Umesahau neno siri lako?"
+
+#: .\templates\registration\password_reset_form.html:10
+msgid "Enter the e-mail address you registered with to obtain a new password."
+msgstr ""
+"Ingiza anwani ya barua pepe uliyosajiliwa nayo ili upate nenosiri mpya"
+
+#: .\templates\registration\password_reset_form.html:21
+msgid "Send e-mail"
+msgstr "Tuma barua pepe"
+
+#~ msgid "Please proceed to"
+#~ msgstr "Tafadhali endelea"
+
+#~ msgid "pay here"
+#~ msgstr "kulipa hapa"

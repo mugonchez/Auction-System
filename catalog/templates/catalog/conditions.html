@@ -1,0 +1,16 @@
+{% extends "catalog/base.html" %}
+
+{% block title %}Terms and conditions{% endblock %}
+
+{% block body %}
+<div class="container">
+    {% load i18n %}
+    <h1>{% trans 'Terms and conditions' %}</h1>
+    <hr>
+    <p>1. Ordered goods will be approved upon six hours of placement of order.Otherwise will be cancelled.</p>
+    <p>2. Approved orders will be cancelled if not paid within three days of approval.</p>
+    <p>3. Paid goods will be delivered within three working days after payment.</p>
+    <p>4. An order will only be considered paid if the customer pays the full amount required.</p>
+    <p>5. Once an order has been paid, it cannot be cancelled.</p>
+</div>
+{% endblock %}

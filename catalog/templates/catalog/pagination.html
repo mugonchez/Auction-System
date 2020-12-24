@@ -1,0 +1,23 @@
+        {% load static %}
+        {% load i18n %}
+    <link rel="stylesheet"  type="text/css" href="{% static 'catalog/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'catalog/style.css' %}">
+
+
+<div class="container">
+    <div class="det">
+        <span class="step-links">
+            {% if page.has_previous %}
+                <a href="?page={{ page.previous_page_number }}">{% trans 'Previous' %}</a>
+            {% endif %}
+
+            <span class="current">
+                {% trans 'Page' %} {{ page.number }} {% trans 'of' %} {{ page.paginator.num_pages }}.
+            </span>
+
+            {% if page.has_next %}
+                <a href="?page={{ page.next_page_number }}">{% trans 'Next' %}</a>
+            {% endif %}
+        </span>
+    </div>
+</div>

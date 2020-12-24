@@ -1,0 +1,204 @@
+{% extends 'catalog/base_list.html' %}
+
+{% block title %} {% if category %} {{category.name }} {% else %} Products {% endif %}{% endblock%}
+
+{% block body %}
+
+{% load static %}
+
+{% load i18n %}
+
+{% load catalog_tags %}
+
+<!--left side bar-->
+
+<div class="container">
+    <div class="col-md-2 sidebar" id="leftbar">
+          <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a href="{% url 'catalog:product_list' %}">{% trans 'All' %}</a>
+                  </h4>
+                </div>
+          </div>
+         <div class="panel-group" id="accordion">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a  data-toggle="collapse" data-parent="#accordion" href="#collapse1">{% trans 'Clothing' %}</a>
+                  </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                  <ul class="list-group">
+                      <li class="list-group-item"><a href="{{men.get_absolute_url }}" >{% trans 'Men' %}</a></li>
+                      <li class="list-group-item"><a href="{{women.get_absolute_url }}" >{% trans 'Women' %}</a></li>
+                      <li class="list-group-item"><a href="{{shoes.get_absolute_url }}" >{% trans 'Shoes' %}</a></li>
+                      <li class="list-group-item"><a href="{{jewelry.get_absolute_url }}" >{% trans 'Jewelry' %}</a></li>
+                  </ul>
+                </div>
+              </div>
+              <br>
+               <div class="panel panel-default cat">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a  data-toggle="collapse" data-parent="#accordion" href="#collapse2">{% trans 'Electronics' %}</a>
+                  </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                  <ul class="list-group">
+                      <li class="list-group-item"><a href="{{phones.get_absolute_url }}" >{% trans 'Phones' %}</a></li>
+                      <li class="list-group-item"><a href="{{laptops.get_absolute_url }}" >{% trans 'Laptops' %}</a></li>
+                      <li class="list-group-item"><a href="{{home_appliances.get_absolute_url }}" >{% trans 'Home Appliances' %}</a></li>
+                      <li class="list-group-item"><a href="{{play_station.get_absolute_url }}" >{% trans 'Play Station' %}</a></li>
+                  </ul>
+                </div>
+              </div>
+         </div>
+          <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a href="{{ furniture.get_absolute_url }}">{% trans 'Furniture' %}</a>
+                  </h4>
+                </div>
+          </div>
+           <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a href="{{ others.get_absolute_url }}">{% trans 'Others' %}</a>
+                  </h4>
+                </div>
+          </div>
+    </div>
+
+
+    <div class="col-md-9" style="overflow-x: scroll;">
+       <h1 style="text-align:center;font-family:Palatino Linotype, Book Antiqua, Palatino, serif;">Bid Items</h1>
+       <p style="text-align:center;color:black; font-weight:bold">{{today}} <span style="font-weight:bold;text-align:center;font-family:Palatino Linotype, Book Antiqua, Palatino, serif;color:#0e4790;" id="time"></span></p>
+       <script>
+            (function () {
+        function checkTime(i) {
+        return (i < 10) ? "0" + i : i;
+        }
+
+        function startTime() {
+        var today = new Date(),
+        h = checkTime(today.getHours()),
+        m = checkTime(today.getMinutes()),
+        s = checkTime(today.getSeconds());
+        document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+        t = setTimeout(function () {
+        startTime()
+        }, 500);
+        }
+        startTime();
+        })();
+       </script>
+       {% for bid in bidItems %}
+        <div class="panel panel-default col-md-3">
+            <a>
+                <div class="panel-body img">
+                     <img src="{{bid.image.url}}" class="img-responsive zoom">
+                </div>
+            </a>
+            <hr>
+            <div class="panel-header">
+                <h4 class="det"> {{bid.name}}</h4>
+            </div>
+            <div class="panel-header">
+              <p style="font-family:Palatino Linotype, Book Antiqua, Palatino, serif;">Minimum bidding price <span style="color:green">{{bid.minimum_price}}</span></p>
+            </div>
+            <div class="panel-header">
+                <p style="font-style: italic; color:grey;font-size:12px; font-weight:bold">Bidding ends on <span style="color: black; font-weight: bold">{{bid.end_date}}</span></p>
+            </div>
+            {% if checker %}
+            <div class="panel-header">
+              <button class="btn btn-success" style="margin:auto; display:block">This Bid has been won</button>
+            </div>
+            {% else %}
+            <div class="panel-header">
+              <a href="{{bid.get_absolute_url}}" class="btn btn-success" style="margin:auto; display:block">Bid Now</a>
+            </div>
+            {% endif %}
+
+        </div>
+      {% empty %}
+      <p class="det" style="font-style:italic;">{% trans 'There are no items to bid' %}</p>
+      {%endfor%}
+    </div>
+</div>
+<div class="container">
+    <h1 class="det">{% if category %}{{category.name}}{% else %}{% trans 'Products' %}{% endif %}</h1>
+    {% for product in products %}
+    <div class="panel panel-default col-md-3">
+        <a href="{{product.get_absolute_url}}">
+            <div class="panel-body img">
+                 <img src="{{product.image.url}}" class="img-responsive zoom">
+            </div>
+        </a>
+        <hr>
+        <div class="panel-header">
+            <h4 class="det"> {{product.name}}</h4>
+        </div>
+        <div class="panel-header">
+          <h5 class="det" id="price">Ksh {{product.price}}</h5>
+        </div>
+    </div>
+    {% empty %}
+    <p class="det">{% trans 'There are no products for this category yet' %}</p>
+    {%endfor%}
+</div>
+
+{% include 'catalog/pagination.html' with page=products %}
+
+<div class="container">
+         <div class="jumbotron col-md-12 detail">
+             <div class="row">
+                 <div class="col-md-3" style="text-align:left">
+                     <h5 class="top">{% trans 'TOP CATEGORIES' %}</h5>
+                     <a href="{{men.get_absolute_url }}" class="blak">{% trans 'Clothing' %}</a><br>
+                     <a href="{{phones.get_absolute_url }}" class="blak">{% trans 'Electronics' %}</a><br>
+                     <a href="{{ furniture.get_absolute_url }}" class="blak">{% trans 'Furniture' %}</a><br>
+                     <a href="{{ others.get_absolute_url }}" class="blak">{% trans 'Others' %}</a><br>
+                     <br>
+                     <a href="https://www.facebook.com">
+                         <img src="{% static 'catalog/img/facebook.png' %}">
+                     </a>
+                 </div>
+                <div class="col-md-3" style="text-align:left">
+                   <h5 class="top">{% trans 'HELP' %}</h5>
+                   <a href="{% url 'catalog:delivery' %}" class="blak">{% trans 'Delivery' %}</a><br>
+                   <a href="{% url 'catalog:returns' %}" class="blak">{% trans 'Returns' %}</a><br>
+                   <a href="{% url 'catalog:payment' %}" class="blak">{% trans 'Secure Payments' %}</a><br>
+                   <a href="{% url 'catalog:contact' %}" class="blak">{% trans 'Contact Us' %}</a><br>
+                   <br>
+                    <a href="https://www.twitter.com">
+                        <img src="{% static 'catalog/img/twitter.png' %}">
+                    </a>
+                </div>
+                <div class="col-md-3" style="text-align:left">
+                    <h5 class="top">{% trans 'ABOUT US' %}</h5>
+                    <a href="{% url 'catalog:careers' %}" class="blak">{% trans 'Careers' %}</a><br>
+                    <a href="{% url 'catalog:conditions' %}" class="blak">{% trans 'Terms & Conditions of Sales' %}</a><br>
+                    <a href="{% url 'catalog:privacy' %}" class="blak">{% trans 'Privacy Policy' %}</a><br>
+                    <a href="{% url 'catalog:responsibility' %}" class="blak">{% trans 'Responsibility' %}</a><br>
+                    <br>
+                    <a href="https://www.gmail.com">
+                        <img src="{% static 'catalog/img/google.png' %}">
+                    </a>
+                </div>
+                <div class="col-md-3" style="text-align:left">
+                    <h5 class="top">{% trans 'FEEDBACK' %}</h5>
+                    <a href="{% url 'catalog:feedback'%}" class="blak">{% trans 'Leave a feedback' %}</a><br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <a href="https://www.linkedin.com">
+                        <img src="{% static 'catalog/img/linked.png' %}">
+                    </a>
+                </div>
+             </div>
+         </div>
+</div>
+
+{% endblock %}

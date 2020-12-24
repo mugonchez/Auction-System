@@ -1,0 +1,84 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-24 11:28+0300\n"
+"PO-Revision-Date: 2018-08-24 00:32+0227\n"
+"Last-Translator: b'  <moses@email.com>'\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.8.1\n"
+
+#: .\orders\forms.py:15
+msgid "Address of delivery"
+msgstr "Anwani ya utoaji"
+
+#: .\orders\forms.py:19
+msgid "Specification of product"
+msgstr "Ufafanuzi wa bidhaa"
+
+#: .\orders\forms.py:24
+msgid "Phone number"
+msgstr "Nambari ya simu"
+
+#: .\orders\templates\orders\order_create.html:12
+msgid ""
+"Please specify the sizes of your products in the specification area. Be "
+"precise and clear"
+msgstr ""
+"Tafadhali taja ukubwa wa bidhaa zako kwenye eneo la vipimo. Kuwa sahihi na "
+"wazi"
+
+#: .\orders\templates\orders\order_create.html:25
+msgid "Place Order"
+msgstr "Agiza"
+
+#: .\orders\templates\orders\order_create.html:34
+msgid "Your Order"
+msgstr "Agizo lako"
+
+#: .\orders\templates\orders\order_create.html:40
+msgid "Quantity"
+msgstr "Wingi"
+
+#: .\orders\templates\orders\order_create.html:41
+msgid "Product"
+msgstr "bidhaa"
+
+#: .\orders\templates\orders\order_create.html:42
+msgid "Unit price"
+msgstr "Thamani ya kitengo"
+
+#: .\orders\templates\orders\order_create.html:43
+msgid "Price"
+msgstr "Thamani"
+
+#: .\orders\templates\orders\order_created.html:10
+msgid "Thank you"
+msgstr "Asante"
+
+#: .\orders\templates\orders\order_created.html:12
+msgid "Your order has been successfully completed. Your order number is"
+msgstr "Agizo lako limekamilika kwa ufanisi. Nambari yako ya utaratibu ni"
+
+#: .\orders\templates\orders\order_created.html:13
+msgid ""
+"Please stay logged in while we process your order. Once we are done, we will "
+"update the status of your order"
+msgstr ""
+"Tafadhali salia ndani wakati tunapofanya utaratibu wako. Mara tukifanywa, "
+"tutasasisha hali ya agizo lako"
+
+#: .\orders\templates\orders\order_created.html:14
+msgid "View the status of your order in your dashboard"
+msgstr "Tazama hali ya agizo lako kwenye dashibodi yako"

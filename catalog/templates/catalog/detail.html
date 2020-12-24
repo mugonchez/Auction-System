@@ -1,0 +1,80 @@
+{% extends 'catalog/base.html' %}
+
+{% load static %}
+
+{% block title %}
+{% if category %} {{category.name }} {% else %} Products {% endif %}
+{% endblock %}
+
+{% block body %}
+{% load i18n %}
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="container">
+            <div class="panel panel-default panther col-md-12">
+                <div class="panel-body pan-bod">
+                    <h2 class="message">{{ message|safe }} </h2>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endif %}
+
+<div class="container">
+     <div class="panel panel-default col-md-5">
+         <div class="panel-body img">
+             <img src="{{product.image.url}}" class="img-responsive">
+         </div>
+    </div>
+    <div class="col-md-5">
+        <h1 class="detail">{{product.name}}</h1>
+        <h2><a class="detail" href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2>
+        <p class="detail" id="money">Ksh {{product.price}}</p>
+        {% if product.stock > 0 %}
+        <p style="color:#6890a5"><strong>{% trans 'Available stock' %}: {{product.stock}}</strong></p>
+        {% else %}
+        <p style="color:#6890a5"><strong>{% trans 'Available stock: depleted '%}</strong></p>
+        {% endif %}
+          {{product.description|linebreaks}}
+        {% if product.stock > 0 %}
+            <form action="{% url 'cart:cart_add' product.id %}" method="post">
+                {% csrf_token %}
+                {{ cart_product_form }}
+                <input type="submit" class="btn btn-primary" id="tocart" value="{% trans 'Add to cart' %}">
+            </form>
+        {% endif %}
+    </div>
+    <a style="margin-top:35px;" href="{% url 'catalog:product_review' product.id%}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-pencil"></span> <strong>{% trans 'Write a Review' %}</strong></a>
+</div>
+<div class="container">
+    <h2 class="col-md-offset-1" id="prev_num">
+        <span class="glyphicon glyphicon-thumbs-up"></span>
+        <span class="glyphicon glyphicon-thumbs-down"></span>&nbsp;
+        {{ review_count }} Review{{ review_count|pluralize }}
+    </h2>
+    {% for review in reviews %}
+    <div class="review">
+       <p class="info">
+           {{review.user}}
+       </p>
+       <p>
+           {{review.body|linebreaks}}
+       </p>
+       <p class="date">
+           {{review.created}}
+       </p>
+    </div>
+    <hr>
+    {% empty %}
+    <p class="date col-md-offset-1">{% trans 'There are no reviews for this product yet' %} </p>
+    {% endfor %}
+</div>
+
+{% include 'catalog/pagination.html' with page=reviews %}
+<div class="container">
+</div>
+
+
+
+{%endblock%}

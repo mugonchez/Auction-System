@@ -1,0 +1,36 @@
+{% extends "catalog/base.html" %}
+{% load static %}
+
+{% block title %} Search {% endblock %}
+
+{% block body %}
+
+<div class="container">
+    {% load i18n %}
+    <h1 style="text-align:center">{% trans 'Search' %}</h1>
+    <hr>
+    <form method="GET" action=".">
+        <div class="col-md-offset-1 col-md-9">
+           {{ form.as_p }}
+        </div>
+        <div class="col-md-2">
+            <input style="padding:6px;" type="submit" class="btn btn-primary" value="{% trans 'Search' %}">
+        </div>
+        <div class="col-md-12 col-md-offset-1">
+           {% if query %}
+             <h3>{% trans 'Products containing' %} "{{query}}"</h3>
+            {% with page.object_list|length as total_results%}
+                <h4>{% trans 'Found' %} {{total_results }} {% trans 'result' %}{{total_results|pluralize}}</h4>
+            {% endwith %}
+             {% for result in page.object_list %}
+                <p>
+                     <a class="results" href="{{ result.object.get_absolute_url }}">{{ result.object.name}}</a>
+                </p>
+            {% endfor %}
+
+        {% endif %}
+        </div>
+    </form>
+</div>
+
+{% endblock %}

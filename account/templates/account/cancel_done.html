@@ -1,0 +1,13 @@
+{% extends 'catalog/base.html' %}
+
+{% block title %}Cancel done {% endblock %}
+
+{% block body %}
+    <div class="container">
+        {% load i18n %}
+        <h1>{% trans 'Cancel done' %}</h1>
+        <hr>
+        <p class="para">Hi {{request.user.username }}, {% trans 'you have successfully cancelled your order' %}</p>
+    </div>
+
+{% endblock %}

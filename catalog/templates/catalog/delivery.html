@@ -1,0 +1,13 @@
+{% extends "catalog/base.html" %}
+
+{% block title %}Delivery{% endblock %}
+
+{% block body %}
+<div class="container">
+    {% load i18n %}
+    <h1>{% trans 'Delivery' %}</h1>
+    <hr>
+    <p class="para">Goods ordered will be delivered 3 days after payment to the address specified<br>
+        by the user during placement of order. The customer can pick the item any day once it is delivered </p>
+</div>
+{% endblock %}

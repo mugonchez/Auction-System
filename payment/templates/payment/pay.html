@@ -1,0 +1,22 @@
+{% extends "catalog/base.html" %}
+
+{% block title %}Top up your account{% endblock %}
+
+{% block body %}
+<div class="container">
+    {% load i18n %}
+    {% if messages %}
+        {% for message in messages %}
+             <div class="panel panel-default panther col-md-12">
+                 <div class="panel-body pan-bod">
+                     <h2 class="message">{{ message|safe }} </h2>
+                 </div>
+             </div>
+        {% endfor %}
+    {% endif %}
+     <h1>{% trans 'Payment Failed' %}</h1>
+     <hr>
+     <p class="para"> {% trans 'Payment for order id' %} {{current_order.id}} {% trans 'failed with the message above. Please ensure that your account has a minimum of'%} Ksh {{current_order.get_total_cost}} {% trans 'to complete your request'%}.</p>
+</div>
+
+{% endblock %}

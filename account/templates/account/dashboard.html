@@ -1,0 +1,161 @@
+{% extends 'account/base_dash.html' %}
+
+{% block title %} Dashboard {% endblock %}
+
+{% block body %}
+<div class="container" xmlns="http://www.w3.org/1999/html">
+    {% load i18n %}
+    <div class="col-md-12">
+        <h1>{% trans 'Dashboard' %}</h1>
+        <hr>
+        <p class="para">{% trans 'Welcome to your dashboard. You can' %} <a href="{% url 'account:edit' %}">{% trans 'edit your account' %}</a>
+            {% trans 'or' %} <a href="{% url 'password_change' %}">{% trans 'change your password' %}.</a>
+        </p>
+        <hr>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="col-md-6 panel panel-default">
+            <div class="panel-header">
+                <h2>Your active orders</h2>
+                <hr>
+            </div>
+            <div class="panel-body">
+                {% for recent in recent_order %}
+                {% if recent.paid %}
+                <h3 style="color:#46707a">{% trans 'Your order id' %} <span style="color:#3352bf;">{{recent.id}}</span>
+                    {% trans 'is settled'%}.</h3>
+                {% else %}
+                <h3 style="color:#46707a">{% trans 'Your pending order id' %}: <span
+                        style="color:#3352bf;">{{recent.id}}</span></h3>
+                {% endif%}
+                {% if recent.approved %}
+                <p style="font-size: 20px;">Status: <span style="color:green;">{% trans 'Approved' %} </span><span
+                        style="color:green" class="glyphicon glyphicon-ok"></span></p>
+                {% if not recent.paid %}
+                <a style="margin-top:35px;" href="#" class="btn btn-primary" data-toggle="modal" data-target="#pop"
+                   role="button"><strong>{% trans 'Pay for this order'%}</strong></a>
+                <div class="modal fade" id="pop">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h2 class="modal-title">Pay</h2>
+                                <hr>
+                                <p>We are about to initiate Lipa na M-PESA on your phone using the number you provided during order placement</p>
+                            </div>
+                            <div class="modal-body">
+                                <form method="post">
+                                    {%csrf_token%}
+                                    <input type="submit" class="btn btn-primary" value="Confirm Payment">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="para">{% trans 'Your total amount to pay for this order is'%}:<span
+                        style="color: #3a69c9;font-size:18px;"> Ksh {{recent.get_total_cost}}</span></p>
+                {% endif %}
+                {% else %}
+                <p style="font-size: 20px;">Status: <span style="color:red">{% trans 'Pending Approval' %}</span></p>
+                {% endif %}
+                {%if recent.paid %}
+                <p style="font-size: 20px;">Payment: <span style="color:green;">{% trans 'Paid' %} </span><span
+                        style="color:green" class="glyphicon glyphicon-ok"></span></p>
+                <p class="para" id="dis">{% trans 'Your delivery will be dispatched in 3 working days to the address you gave.You will be notified once it is delivered' %}</p>
+                <a style="font-size:16px;" href="{% url 'account:clear_order' recent.id %}"
+                   class="btn btn-primary clear"
+                   role="button">{% trans 'Clear this order from dashboard' %}</a>
+                {% else %}
+                <p style="font-size: 20px;">Payment: <span style="color:red">{% trans 'Pending Payment' %}</span></p>
+                {% endif %}
+                {% if not recent.approved %}
+                <a style="font-size:16px;" href="{% url 'account:cancel_order' recent.id %}"
+                   class="btn btn-success cancel"
+                   role="button">{% trans 'Cancel this order' %}</a>
+                {% endif %}
+                <hr>
+                {% empty%}
+                <p style="color:#095025; font-family: Palatino Linotype, Book Antiqua, Palatino, serif;font-style:italic; padding-left:40px">
+                    {% trans 'You do not have any active orders' %}</p>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-md-6 panel panel-default">
+            <div class="panel-header">
+                 <h2>Your Won Bids</h2>
+                 <hr>
+            </div>
+            <div class="panel-body">
+                {% for bid in bidder %}
+                <p style="font-family:Palatino Linotype, Book Antiqua, Palatino, serif;">Item won: {{bid.bidItem}}</p>
+                {%if bid.bidItem.paid %}
+                <p style="font-size: 20px;">Payment: <span style="color:green;">{% trans 'Paid' %} </span><span
+                        style="color:green" class="glyphicon glyphicon-ok"></span></p>
+                <p class="para">{% trans 'Your delivery will be dispatched in 3 working days to the address you gave.You
+                    will be notified once it is delivered' %}</p>
+                {% else %}
+                <p style="font-size: 20px;">Payment: <span style="color:red">{% trans 'Pending Payment' %}</span></p>
+                <a href="{% url 'account:pay_bid' bid.id %}" class="btn btn-success" role="button">
+                    {% trans 'Pay for this bid' %}
+                </a>
+                <p class="para">{% trans 'Your total amount to pay for this bid is'%}:<span
+                        style="color: #3a69c9;font-size:18px;"> Ksh {{bid.amount}}</span></p>
+                {% endif %}
+                {% empty%}
+                <p style="color:#095025; font-family: Palatino Linotype, Book Antiqua, Palatino, serif;font-style:italic; padding-left:40px">
+                    {% trans 'You do not have any active bids' %}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="panel panel-default col-md-6 panheight">
+        <div class="panel-header">
+            <h3 style="padding-left:40px;">
+                <a style="outline:0; color:#5987c3; text-decoration: none;font-family: Palatino Linotype, Book Antiqua, Palatino, serif;"
+                   data-toggle="collapse" href="#collapse1">{% trans 'Your past orders summary' %} </a>
+            </h3>
+        </div>
+        <hr>
+        <div class="panel-body panel-collapse collapse" id="collapse1">
+            {% for order in orders %}
+            <ul style="list-style-type:circle">
+                <h4>{{order.order}}</h4>
+                <li style=" color:#0f7d1c; font-family: Palatino Linotype, Book Antiqua, Palatino, serif; ">
+                    {{order.quantity}} &nbsp; {{order.product}} &nbsp; <span>@  Ksh {{order.price}}</span></li>
+                <h3 class="date">{{order.created}}</h3>
+                <hr>
+            </ul>
+            {% empty %}
+            <p style="color:#095025; font-family: Palatino Linotype, Book Antiqua, Palatino, serif;font-style:italic; padding-left:40px">
+                {% trans 'You have not placed any orders yet' %}</p>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="panel panel-default col-md-6 panheight">
+        <div class="panel-header">
+            <h3 style="padding-left:40px;">
+                <a style="outline:0; color:#07a796; text-decoration: none;font-family: Palatino Linotype, Book Antiqua, Palatino, serif;"
+                   data-toggle="collapse" href="#collapse2">{% trans 'Your message inbox' %} </a>
+            </h3>
+        </div>
+        <hr>
+        <div class="panel-body panel-collapse collapse" id="collapse2">
+            {% for notification in read_notifications %}
+            <P style="color:#08598d; font-family: Palatino Linotype; padding-left:30px;">{{notification.message}}</P>
+            <p class="date2">
+                {{notification.created}}
+            </p>
+            <hr>
+            {% empty %}
+            <p style="color:#095025; font-family: Palatino Linotype, Book Antiqua, Palatino, serif;font-style:italic; padding-left:40px">
+                {% trans 'You have no new message' %}</p>
+            {% endfor %}
+        </div>
+    </div>
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,349 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-25 14:18+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\forms.py:8
+msgid "Password"
+msgstr ""
+
+#: .\forms.py:9
+msgid "Repeat password"
+msgstr ""
+
+#: .\forms.py:10 .\forms.py:25
+msgid "Username"
+msgstr ""
+
+#: .\forms.py:11 .\forms.py:28
+msgid "Email"
+msgstr ""
+
+#: .\forms.py:26
+msgid "Last Name"
+msgstr ""
+
+#: .\forms.py:27
+msgid "First Name"
+msgstr ""
+
+#: .\forms.py:36
+msgid "Address"
+msgstr ""
+
+#: .\forms.py:46
+msgid "I have read and agree to the terms and conditions"
+msgstr ""
+
+#: .\templates\account\base_dash.html:32
+msgid "Home"
+msgstr ""
+
+#: .\templates\account\base_dash.html:35
+msgid "Search"
+msgstr ""
+
+#: .\templates\account\base_dash.html:39
+msgid "My dashboard"
+msgstr ""
+
+#: .\templates\account\base_dash.html:48
+msgid "Your cart"
+msgstr ""
+
+#: .\templates\account\base_dash.html:54
+msgid "Your cart is empty"
+msgstr ""
+
+#: .\templates\account\base_dash.html:68
+msgid "Messages"
+msgstr ""
+
+#: .\templates\account\base_dash.html:74
+msgid "Logout"
+msgstr ""
+
+#: .\templates\account\base_dash.html:78
+msgid "Sign Up"
+msgstr ""
+
+#: .\templates\account\base_dash.html:79 .\templates\registration\login.html:8
+#: .\templates\registration\login.html:27
+msgid "Log-in"
+msgstr ""
+
+#: .\templates\account\cancel_done.html:8
+msgid "Cancel done"
+msgstr ""
+
+#: .\templates\account\cancel_done.html:10
+msgid "you have successfully cancelled your order"
+msgstr ""
+
+#: .\templates\account\dashboard.html:9
+msgid "Dashboard"
+msgstr ""
+
+#: .\templates\account\dashboard.html:11
+msgid "Welcome to your dashboard. You can"
+msgstr ""
+
+#: .\templates\account\dashboard.html:11
+msgid "edit your account"
+msgstr ""
+
+#: .\templates\account\dashboard.html:12
+msgid "or"
+msgstr ""
+
+#: .\templates\account\dashboard.html:12
+msgid "change your password"
+msgstr ""
+
+#: .\templates\account\dashboard.html:15
+msgid ""
+"To pay for your orders, please ensure that you have first activated your "
+"account"
+msgstr ""
+
+#: .\templates\account\dashboard.html:21
+msgid "My Account"
+msgstr ""
+
+#: .\templates\account\dashboard.html:26
+msgid "Account Balance"
+msgstr ""
+
+#: .\templates\account\dashboard.html:27
+msgid "Top Up"
+msgstr ""
+
+#: .\templates\account\dashboard.html:29
+msgid "Please activate your account by topping up any amount"
+msgstr ""
+
+#: .\templates\account\dashboard.html:30
+msgid "Activate Account"
+msgstr ""
+
+#: .\templates\account\dashboard.html:39
+msgid "Your order id"
+msgstr ""
+
+#: .\templates\account\dashboard.html:39
+msgid "is settled"
+msgstr ""
+
+#: .\templates\account\dashboard.html:41
+msgid "Your pending order id"
+msgstr ""
+
+#: .\templates\account\dashboard.html:44
+msgid "Approved"
+msgstr ""
+
+#: .\templates\account\dashboard.html:47
+msgid "Pay for this order"
+msgstr ""
+
+#: .\templates\account\dashboard.html:49
+msgid "Your total amount to pay for this order is"
+msgstr ""
+
+#: .\templates\account\dashboard.html:52
+msgid "Pending Approval"
+msgstr ""
+
+#: .\templates\account\dashboard.html:55
+msgid "Paid"
+msgstr ""
+
+#: .\templates\account\dashboard.html:56
+msgid ""
+"Your delivery will be dispatched in 3 working days to the address you gave."
+"You will be notified once it is delivered"
+msgstr ""
+
+#: .\templates\account\dashboard.html:57
+msgid "Clear this order from dashboard"
+msgstr ""
+
+#: .\templates\account\dashboard.html:59
+msgid "Pending Payment"
+msgstr ""
+
+#: .\templates\account\dashboard.html:62
+msgid "Cancel this order"
+msgstr ""
+
+#: .\templates\account\dashboard.html:71
+msgid "Your past orders summary"
+msgstr ""
+
+#: .\templates\account\dashboard.html:84
+msgid "You have not placed any orders yet"
+msgstr ""
+
+#: .\templates\account\dashboard.html:92
+msgid "Your message inbox"
+msgstr ""
+
+#: .\templates\account\dashboard.html:104
+msgid "You have no new message"
+msgstr ""
+
+#: .\templates\account\edit.html:18
+msgid "Edit your account"
+msgstr ""
+
+#: .\templates\account\edit.html:20
+msgid "You can edit your account using the following form"
+msgstr ""
+
+#: .\templates\account\edit.html:32
+msgid "Save changes"
+msgstr ""
+
+#: .\templates\account\register.html:8
+msgid "Create an account"
+msgstr ""
+
+#: .\templates\account\register.html:10
+msgid "Please sign up using the following form"
+msgstr ""
+
+#: .\templates\account\register.html:20
+msgid "Terms and conditions of our services"
+msgstr ""
+
+#: .\templates\account\register.html:30
+msgid "Create account"
+msgstr ""
+
+#: .\templates\account\register_done.html:8
+msgid "Welcome"
+msgstr ""
+
+#: .\templates\account\register_done.html:10
+msgid "Your account has been successfully created. Now you can"
+msgstr ""
+
+#: .\templates\account\register_done.html:10
+msgid "log-in"
+msgstr ""
+
+#: .\templates\registration\logged_out.html:8
+msgid "Logged-out"
+msgstr ""
+
+#: .\templates\registration\logged_out.html:10
+msgid "You have been successfully logged out. You can"
+msgstr ""
+
+#: .\templates\registration\logged_out.html:10
+msgid "Log-in again"
+msgstr ""
+
+#: .\templates\registration\login.html:12
+msgid "Your username and password didn't match.please try again"
+msgstr ""
+
+#: .\templates\registration\login.html:15
+msgid "Please use the following form to log-in. If you don't have an account"
+msgstr ""
+
+#: .\templates\registration\login.html:15
+msgid "register here"
+msgstr ""
+
+#: .\templates\registration\login.html:31
+msgid "Forgotten your  password?"
+msgstr ""
+
+#: .\templates\registration\password_change_done.html:8
+msgid "Password changed"
+msgstr ""
+
+#: .\templates\registration\password_change_done.html:10
+msgid "Your password has successfully been changed"
+msgstr ""
+
+#: .\templates\registration\password_change_form.html:8
+msgid "Change you password"
+msgstr ""
+
+#: .\templates\registration\password_change_form.html:10
+msgid "Use the form below to change your password."
+msgstr ""
+
+#: .\templates\registration\password_change_form.html:21
+msgid "Change"
+msgstr ""
+
+#: .\templates\registration\password_reset_complete.html:8
+msgid "Password set"
+msgstr ""
+
+#: .\templates\registration\password_reset_complete.html:10
+msgid "Your password has been set. You can"
+msgstr ""
+
+#: .\templates\registration\password_reset_complete.html:10
+msgid "log-in now"
+msgstr ""
+
+#: .\templates\registration\password_reset_confirm.html:8
+#: .\templates\registration\password_reset_done.html:8
+msgid "Reset your password"
+msgstr ""
+
+#: .\templates\registration\password_reset_confirm.html:11
+msgid "Please enter your new password twice"
+msgstr ""
+
+#: .\templates\registration\password_reset_confirm.html:22
+msgid "Change my password"
+msgstr ""
+
+#: .\templates\registration\password_reset_confirm.html:31
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used. Please request a new password reset"
+msgstr ""
+
+#: .\templates\registration\password_reset_done.html:10
+msgid "We've emailed you instructions for setting your password."
+msgstr ""
+
+#: .\templates\registration\password_reset_done.html:11
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with."
+msgstr ""
+
+#: .\templates\registration\password_reset_form.html:8
+msgid "Forgotten your password?"
+msgstr ""
+
+#: .\templates\registration\password_reset_form.html:10
+msgid "Enter the e-mail address you registered with to obtain a new password."
+msgstr ""
+
+#: .\templates\registration\password_reset_form.html:21
+msgid "Send e-mail"
+msgstr ""

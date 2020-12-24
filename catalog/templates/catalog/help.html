@@ -1,0 +1,25 @@
+{% extends 'catalog/base.html' %}
+
+{% block title %} Help {% endblock %}
+
+{% block body %}
+{% load static %}
+{% load i18n %}
+    <div class="container">
+        <h2>{% trans 'How to place an order' %}</h2>
+        <hr>
+        <p class="para">1. {% trans 'Navigate through the products and select the  products you want to purchase by clicking on the product' %}</p>
+        <br>
+        <img src="{% static 'catalog/img/image1.PNG' %}" class="img-responsive">
+        <br>
+        <p class="para">2. {% trans 'Click on the product you want to purchase the add it to the cart' %}</p>
+        <br>
+        <img src="{% static 'catalog/img/image2.PNG' %}" class="img-responsive">
+        <br>
+        <p class="para">3. {% trans 'Once you have exhausted your cart, click the checkout button and proceed to placing an order' %}</p>
+        <br>
+        <img src="{% static 'catalog/img/image3.PNG' %}" class="img-responsive">
+
+    </div>
+
+{% endblock %}

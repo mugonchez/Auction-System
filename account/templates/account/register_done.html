@@ -1,0 +1,13 @@
+{% extends "catalog/base.html" %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block body %}
+<div class="container">
+     {% load i18n %}
+     <h1>{% trans 'Welcome' %} {{ new_user.username }}!</h1>
+     <hr>
+     <p class="para">{% trans 'Your account has been successfully created. Now you can' %} <a href="{% url 'login' %}">{% trans 'log-in' %}</a>.</p>
+</div>
+
+{% endblock %}

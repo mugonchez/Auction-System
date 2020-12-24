@@ -1,0 +1,284 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-25 14:09+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\forms.py:7
+msgid "review"
+msgstr ""
+
+#: .\forms.py:15
+msgid "Email"
+msgstr ""
+
+#: .\forms.py:16
+msgid "Body"
+msgstr ""
+
+#: .\templates\catalog\base.html:34 .\templates\catalog\base_list.html:34
+msgid "Home"
+msgstr ""
+
+#: .\templates\catalog\base.html:37 .\templates\catalog\base_list.html:37
+#: .\templates\search\search.html:10 .\templates\search\search.html:17
+msgid "Search"
+msgstr ""
+
+#: .\templates\catalog\base.html:40 .\templates\catalog\base_list.html:40
+msgid "Help Center"
+msgstr ""
+
+#: .\templates\catalog\base.html:42 .\templates\catalog\base_list.html:42
+msgid "My dashboard"
+msgstr ""
+
+#: .\templates\catalog\base.html:51 .\templates\catalog\base_list.html:51
+msgid "Your cart"
+msgstr ""
+
+#: .\templates\catalog\base.html:57 .\templates\catalog\base_list.html:57
+msgid "Your cart is empty"
+msgstr ""
+
+#: .\templates\catalog\base.html:71 .\templates\catalog\base_list.html:82
+msgid "Logout"
+msgstr ""
+
+#: .\templates\catalog\base.html:75 .\templates\catalog\base_list.html:86
+msgid "Sign Up"
+msgstr ""
+
+#: .\templates\catalog\base.html:76 .\templates\catalog\base_list.html:87
+msgid "Log-in"
+msgstr ""
+
+#: .\templates\catalog\base_list.html:66
+msgid "Language"
+msgstr ""
+
+#: .\templates\catalog\detail.html:35
+msgid "Available stock"
+msgstr ""
+
+#: .\templates\catalog\detail.html:37
+msgid "Available stock: depleted "
+msgstr ""
+
+#: .\templates\catalog\detail.html:44 .\templates\catalog\review.html:46
+msgid "Add to cart"
+msgstr ""
+
+#: .\templates\catalog\detail.html:48
+msgid "Write a Review"
+msgstr ""
+
+#: .\templates\catalog\detail.html:70
+msgid "There are no reviews for this product yet"
+msgstr ""
+
+#: .\templates\catalog\feedback.html:24 .\templates\catalog\list.html:169
+msgid "Leave a feedback"
+msgstr ""
+
+#: .\templates\catalog\feedback.html:37
+msgid "Send Feedback"
+msgstr ""
+
+#: .\templates\catalog\help.html:9
+msgid "How to place an order"
+msgstr ""
+
+#: .\templates\catalog\help.html:11
+msgid ""
+"Navigate through the products and select the  products you want to purchase "
+"by clicking on the product"
+msgstr ""
+
+#: .\templates\catalog\help.html:15
+msgid "Click on the product you want to purchase the add it to the cart"
+msgstr ""
+
+#: .\templates\catalog\help.html:19
+msgid ""
+"Once you have exhausted your cart, click the checkout button and proceed to "
+"placing an order"
+msgstr ""
+
+#: .\templates\catalog\list.html:20
+msgid "All"
+msgstr ""
+
+#: .\templates\catalog\list.html:28
+msgid "Men clothing"
+msgstr ""
+
+#: .\templates\catalog\list.html:33
+msgid "Shirts"
+msgstr ""
+
+#: .\templates\catalog\list.html:34 .\templates\catalog\list.html:52
+msgid "Trousers"
+msgstr ""
+
+#: .\templates\catalog\list.html:35 .\templates\catalog\list.html:51
+msgid "Suit"
+msgstr ""
+
+#: .\templates\catalog\list.html:36
+msgid "Sweaters"
+msgstr ""
+
+#: .\templates\catalog\list.html:44
+msgid "Women clothing"
+msgstr ""
+
+#: .\templates\catalog\list.html:49
+msgid "Dresses"
+msgstr ""
+
+#: .\templates\catalog\list.html:50
+msgid "Blouses"
+msgstr ""
+
+#: .\templates\catalog\list.html:60 .\templates\catalog\list.html:138
+msgid "Shoes"
+msgstr ""
+
+#: .\templates\catalog\list.html:67 .\templates\catalog\list.html:139
+msgid "Others"
+msgstr ""
+
+#: .\templates\catalog\list.html:97
+msgid "Most recent items"
+msgstr ""
+
+#: .\templates\catalog\list.html:99
+msgid "Most reviewed items"
+msgstr ""
+
+#: .\templates\catalog\list.html:101
+msgid "Most purchased items"
+msgstr ""
+
+#: .\templates\catalog\list.html:103
+msgid "Subscribe to our RSS feed"
+msgstr ""
+
+#: .\templates\catalog\list.html:108
+msgid "Products"
+msgstr ""
+
+#: .\templates\catalog\list.html:125
+msgid "There are no products for this category yet"
+msgstr ""
+
+#: .\templates\catalog\list.html:135
+msgid "TOP CATEGORIES"
+msgstr ""
+
+#: .\templates\catalog\list.html:136
+msgid "Men Clothing"
+msgstr ""
+
+#: .\templates\catalog\list.html:137
+msgid "Women Clothing"
+msgstr ""
+
+#: .\templates\catalog\list.html:146
+msgid "HELP"
+msgstr ""
+
+#: .\templates\catalog\list.html:147
+msgid "Delivery"
+msgstr ""
+
+#: .\templates\catalog\list.html:148
+msgid "Returns"
+msgstr ""
+
+#: .\templates\catalog\list.html:149
+msgid "Secure Payments"
+msgstr ""
+
+#: .\templates\catalog\list.html:150
+msgid "Contact Us"
+msgstr ""
+
+#: .\templates\catalog\list.html:157
+msgid "ABOUT US"
+msgstr ""
+
+#: .\templates\catalog\list.html:158
+msgid "Careers"
+msgstr ""
+
+#: .\templates\catalog\list.html:159
+msgid "Terms & Conditions of Sales"
+msgstr ""
+
+#: .\templates\catalog\list.html:160
+msgid "Privacy Policy"
+msgstr ""
+
+#: .\templates\catalog\list.html:161
+msgid "Responsibility"
+msgstr ""
+
+#: .\templates\catalog\list.html:168
+msgid "FEEDBACK"
+msgstr ""
+
+#: .\templates\catalog\pagination.html:11
+msgid "Previous"
+msgstr ""
+
+#: .\templates\catalog\pagination.html:15
+msgid "Page"
+msgstr ""
+
+#: .\templates\catalog\pagination.html:15
+msgid "of"
+msgstr ""
+
+#: .\templates\catalog\pagination.html:19
+msgid "Next"
+msgstr ""
+
+#: .\templates\catalog\review.html:25
+msgid "Review this product"
+msgstr ""
+
+#: .\templates\catalog\review.html:50
+msgid "Go back"
+msgstr ""
+
+#: .\templates\catalog\review.html:70
+msgid "Add a review"
+msgstr ""
+
+#: .\templates\search\search.html:21
+msgid "Products containing"
+msgstr ""
+
+#: .\templates\search\search.html:23
+msgid "Found"
+msgstr ""
+
+#: .\templates\search\search.html:23
+msgid "result"
+msgstr ""

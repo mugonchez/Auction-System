@@ -1,0 +1,58 @@
+{% extends 'catalog/base.html' %}
+
+{% block title%}payment{% endblock %}
+
+{% block body %}
+{% load static %}
+    <div class="container">
+        {% if messages %}
+            {% for message in messages %}
+                    <div class="panel panel-default  panther col-md-12">
+                        <div class="panel-body pan-bod">
+                            <h2 class="message">{{ message|safe }} </h2>
+                        </div>
+                    </div>
+            {% endfor %}
+       {% endif %}
+        <h1>Pay here</h1>
+        <hr>
+        <p class="para">Please enter the transaction code in the form below. You can either pay with M-Pesa, Airtel-Money or T-Kash</p>
+        {% if form.errors %}
+        <P style="color:red; font-size:16px;">
+        Your username and password didn't match.
+        please try again
+        </P>
+        {% endif %}
+        <div class="container">
+            <div class="row">
+                <div class="panel panel-default" style="margin-bottom:1px;">
+                    <div class="panel-body">
+                        <form action="." class="form-horizontal" method="post" enctype="multipart/form-data">
+                            {% csrf_token%}
+                            {% include 'payment/form_template.html'%}
+                            <input type="hidden" name="next" value="{{ next }}" />
+                            <div class="form-group">
+                                <div class="col-sm-10">
+                                    <button type="Submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="col-md-4">
+                 <img src="{% static 'catalog/img/mpesa.png' %}" class="img-responsive">
+                <p style="text-align: center; font-size: 18px;"><strong>Pay Bill Number: 78985</strong></p>
+            </div>
+            <div class="col-md-4">
+                 <img src="{% static 'catalog/img/airtel.png' %}" class="img-responsive">
+                <p style="text-align: center; font-size: 18px;"><strong>Pay Bill Number: 77985</strong></p>
+            </div>
+            <div class="col-md-4">
+                  <img src="{% static 'catalog/img/telkom.png' %}" class="img-responsive">
+                  <p style="text-align: center; font-size: 18px;"><strong>Pay Bill Number: 76985</strong></p>
+            </div>
+
+    </div>
+{% endblock %}

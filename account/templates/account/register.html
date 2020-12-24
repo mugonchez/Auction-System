@@ -1,0 +1,41 @@
+{% extends "catalog/base.html" %}
+
+{% block title %}Create an account{% endblock %}
+
+{% block body %}
+<div class="container">
+    {% load i18n %}
+    <h1>{% trans 'Create an account' %}</h1>
+    <hr>
+    <p class="para">{% trans 'Please sign up using the following form' %}</p>
+    <div class="container">
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form action="." class="form-horizontal" method="post" enctype="multipart/form-data">
+                        {% csrf_token%}
+                        {% include 'account/form_template2.html' %}
+                        <input type="hidden" name="next" value="{{ next }}" />
+                         <div class="col-md-10" id="terms">
+                             <h4 style="font-style:bold;"><strong>{% trans 'Terms and conditions of our services' %}</strong></h4>
+                             <p>1. Ordered goods will be approved upon six hours of placement of order.Otherwise will be cancelled.</p>
+                             <p>2. Approved orders will be cancelled if not paid within three days of approval.</p>
+                             <p>3. Paid goods will be delivered within three working days after payment.</p>
+                             <p>4. An order will only be considered paid if the customer pays the full amount required.</p>
+                             <p>5. Once an order has been paid, it cannot be cancelled.</p>
+                             <p>6. To sell an item or bid an item contact admin. Visit contact us page</p>
+                             <p>7. Electronics will only be uploaded for sale upon issue of evidence of ownership eg warranty or purchase receipt to the system admin</p>
+                         </div>
+                        {% include 'account/form_template4.html' %}
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <button type="Submit" class="btn btn-primary">{% trans 'Create account' %}</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
